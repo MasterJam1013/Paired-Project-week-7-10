@@ -1,0 +1,293 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #87CEEB;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr  1fr 1fr;
+    grid-template-areas:
+            "header header button button"
+            "rainbow rainbow rainbow rainbow"
+            "race race refreshed refreshed"
+            "copy copy copy copy";
+}
+
+
+
+#event {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+}
+section#popsicle-race { 
+    grid-area: race;
+    display: flex;
+    flex-direction: row;}
+
+section#popsicle-race h3 {
+    text-align: center;
+}
+
+section#popsicle-race h3 p {
+    align-self: center;
+    justify-self: center;
+    vertical-align: top;
+}
+
+
+section img {
+    display: flex;
+    align-items: stretch;
+    object-fit: scale-down;
+}
+
+section#store { 
+    grid-area: refreshed;
+}
+
+section#store h3 {
+    text-align: center;
+}
+
+nav { 
+    grid-area: button;
+}
+
+footer { grid-area: copy;}
+
+ header img { 
+    grid-area: header;
+    object-fit:scale-down;
+    margin-right: 20px;
+    position:relative;
+    right: 3%;
+    height:80px;
+    width: 20%;
+}
+
+main { grid-area: rainbow;
+display: flex;
+flex-direction: row;
+align-items: center; }
+
+
+
+nav ul { 
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+nav ul li {
+    list-style: none;
+    width: 30%;
+    background-color: #00afef;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 50px;
+}
+
+
+ .logo {
+     max-width: 100%;
+     max-height: 100%;
+ }
+
+ header {grid-area: header;
+        display: flex;}
+
+header h1 {
+    padding-left: 20px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+main img {
+    object-fit:scale-down;
+    margin-right: 20px;
+    position:relative;
+    right: 1%;
+    height: 350px;
+    
+}
+
+.submit {
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #00afef;
+    font-weight:bolder;
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+main div ul {
+    display: flex;
+    flex-direction: column;
+}
+
+main li{
+    list-style: none;
+}
+
+main li:before {
+    content: '🍡';
+    margin-left: -31px;
+    padding-right: 8px;
+}
+
+main, section, footer {
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.store-button { /* used for store link in "Get refreshed" section */
+    width: 25%;
+    padding: 10px;
+    border-radius: 5px;
+    color: #000000;
+    background-color: #00afef;
+    font-weight:bolder;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+img {max-width:100% } /*100% of container*/
+
+nav {display: flex; 
+    flex-direction:column;
+    justify-content: flex-end;
+    }
+
+    ul { display:flex; /*space between buttons on page*/
+        justify-content: space-between;}
+    
+ nav ul li { list-style: none;
+            background-color:  #00afef;
+            line-height: 50px;
+            width: 30%;
+            border-radius: 5px;
+            text-align: center; }
+
+nav ul li a { /*Buttons*/
+                text-transform: uppercase;
+                 font-weight: bolder;
+                color: black;
+                font-size: .9rem ;
+                text-decoration: none;
+              }
+.store-button {  /*calling class using .*/
+                display: block;
+                background-color: #00afef;
+                color: black;
+                line-height: 50px;
+                width:25%;
+                text-align: center;
+                border-radius: 5px;
+                text-transform: uppercase;
+                text-decoration: none;
+                margin-left: 40%; }
+
+     h3 ul li { /*Currently not working*/
+        align-items:center;
+        justify-items: center;
+    }
+
+                
+                
+/*CONTACT US Dropdown menu still needs work */
+        
+
+    * Dropdown Button *
+    .dropbtn {
+      background-color: #00afef;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+    }
+    
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display:none;
+      position: absolute;
+      background-color: #f1f1f1;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {background-color: #00afef;}
+    
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {display: block;}
+    
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {background-color: #00afef;}
+
+
+    /*Add Media Query 800px*/
+
+    @media only screen and (max-width: 800px) {
+        
+        nav ul li {
+            justify-content: space-between;
+            flex-direction: column;
+          list-style: none;
+          background-color: #00afef;
+          line-height: 20px;
+          width: 50%;
+          border-radius: 5px;
+          text-align: center;
+          max-width: 30%;
+        }
+
+        nav ul {
+            justify-content: space-between;
+            
+
+        }
+
+        body {
+            display :grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                    "header"
+                    "button"
+                    "rainbow"
+                    "race"
+                    "refreshed"
+                    "copy";
+        }
+    }
+
+
+
+
+
+
+
